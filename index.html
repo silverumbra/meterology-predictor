@@ -16,31 +16,39 @@
     </header>
     <div class="weather-app">
      <div class="container">
-     <div class="form-floating ml-4 mt-3 mb-4 w-25">
-         <input type="search" class="form-control bg-dark" id="floatingInput" placeholder="Forecast for...">
+     <div class="form-floating ml-4 mt-3 mb-4 w-25 search-form">
+         <form class="search-form" id="search-form">
+         <input type="search" class="form-control bg-dark" id="city-input" autocomplete="off" autofocus="on" placeholder="Forecast for...">
          <input type="submit" value="Predict" class = "btn btn-dark shadow-sm" id="search-form"/>
+         </form>
      </div>
      <div class="row">
          <div class="col-2" id="date">
-             22/05/21
+             
 
          </div>
          <div class="col-2" id="city">
-             Paris
+             
          </br>
-             <span id="temperature"> 
-                 2º C|F </span>
+             <strong id="temperature"></strong>
+                <span class="units"><a href="#" id="celius-link" class="active">ºC</a>
+                    |
+                    <a href="#" id="fahrenheit-link" class="active">ºF</a>
+                    </span>
          </div>
 
-
+<div class="col">
+    <div>
+        <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="" id="icon" />
+    </div>
 
           
-<div class="col-2"id="windSpeed">200km/h</div>
+<div class="col-2"id="wind"></div>
 
-<div class ="col-2"id="description">sunny with a chance of rain</div>
+<div class ="col-2"id="description"></div>
 
 <div class="col-2" id="humidity">
-    11%
+    
 </div>
 
 
