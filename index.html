@@ -6,13 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>meterology predictor</title>
     <link rel="stylesheet", href="style.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
+    <header>
+    </header>
+    <div class="weather-app">
+     <div class="container">
+     <div class="form-floating ml-4 mt-3 mb-4 w-25">
+         <input type="search" class="form-control" id="floatingInput" placeholder="Forecast for...">
+         <input type="submit" value="Predict" class = "btn btn-dark shadow-sm" id="search-form"/>
+     </div>
+     <div class="row">
+         <div class="col-2" id="city">
+             Paris
+         </div>
+
+           <div class="col-2" id="temperature">
+               2º
+       </div>  
+<div class="col-2"id="windSpeed">200km/h</div>
+
+<div class ="col-2"id="description">sunny with a chance of rain</div>
+
+<div class="col-2" id="humidity">
+    11%
+</div>
+
+     </div>
+
+
+</div>
+     </div>
 
 
 
 
+
+    <footer>
+
+    </footer>
     <script src="index.js"></script>
 </body>
 </html>
