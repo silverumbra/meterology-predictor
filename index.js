@@ -15,7 +15,7 @@ function formatDate(timestamp) {
     return `${day} ${hours}:${minutes}`;
     }
 
-    function displayForecast() {
+    function displayForecast(response) {
         let forecastElement = document.querySelector("#forecast");
         let forecastHTML = `<div class="row">`;
 
@@ -42,6 +42,11 @@ forecastElement.innerHTML = forecastHTML;
 
     }
 
+    function getForecast(coordinates) {
+        let apiKey = "edb378f0be539a4b2c5c96da53e9f0c1";
+let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+   axios.get(apiUrl).then(displayForecast);
+}
 
 function displayTemperature(response) {
 
@@ -67,6 +72,7 @@ console.log(response.data);
     iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
     iconElement.setAttribute("alt", response.data.weather[0].description);
 
+getForecast(response.data.coord);
 
 }
 
@@ -116,4 +122,3 @@ let celiusLink = document.querySelector("#celius-link");
 celiusLink.addEventListener("click", displayCeliusTemperature);
 
 
-displayForecast();
