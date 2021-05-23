@@ -14,7 +14,11 @@ body {
 }
 
 .weather-forecast-min {
-  color: #6c82cd;
+  color: #cae1e9;
+}
+
+.weather-forecast-max {
+  color: #d0aef8;
 }
 
 p {
