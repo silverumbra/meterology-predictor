@@ -78,8 +78,8 @@ console.log(response.data);
      celiusTemperature = response.data.main.temp;
 
     dateElement.innerHTML = formatDate(response.data.dt * 1000);
-    windElement.innerHTML = Math.round(response.data.wind.speed);
-    humidityElement.innerHTML = response.data.main.humidity;
+    windElement.innerHTML = Math.round(response.data.wind.speed) + " km/h";
+    humidityElement.innerHTML = response.data.main.humidity + " %";
     descriptionElement.innerHTML = response.data.weather[0].description;
     cityElement.innerHTML = response.data.name;
     temperatureElement.innerHTML = Math.round(response.data.main.temp);
