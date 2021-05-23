@@ -7,7 +7,7 @@ function formatDate(timestamp) {
     }
     let minutes = date.getMinutes();
     if (minutes < 10) {
-        minutes = `${minutes}`;
+        minutes = `0${minutes}`;
     }
 
     let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
@@ -25,6 +25,8 @@ function formatDate(timestamp) {
     }
 
     function displayForecast(response) {
+
+
         let forecast = response.data.daily;
         let forecastElement = document.querySelector("#forecast");
         let forecastHTML = `<div class="row">`;
@@ -60,10 +62,13 @@ forecastElement.innerHTML = forecastHTML;
         let apiKey = "edb378f0be539a4b2c5c96da53e9f0c1";
 let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
    axios.get(apiUrl).then(displayForecast);
+
+ 
 }
 
 function displayTemperature(response) {
 
+    
 console.log(response.data);
 
     let cityElement = document.querySelector("#city");
@@ -78,13 +83,18 @@ console.log(response.data);
      celiusTemperature = response.data.main.temp;
 
     dateElement.innerHTML = formatDate(response.data.dt * 1000);
-    windElement.innerHTML = Math.round(response.data.wind.speed) + " km/h";
-    humidityElement.innerHTML = response.data.main.humidity + " %";
+    windElement.innerHTML = "Wind speed: " + Math.round(response.data.wind.speed) + " km/h";
+    humidityElement.innerHTML = "Humidity: " + response.data.main.humidity + " %";
     descriptionElement.innerHTML = response.data.weather[0].description;
     cityElement.innerHTML = response.data.name;
     temperatureElement.innerHTML = Math.round(response.data.main.temp);
     iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
     iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  //let sunriseElement = document.querySelector("#sunrise");
+  //let timezone = response.data.timezone / 3600;
+
+   //sunriseElement.innerHTML = timezone;
 
 getForecast(response.data.coord);
 

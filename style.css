@@ -1,12 +1,12 @@
 .weather-app {
   padding: 20px;
   color: #3500d3;
-  font-family: garamond;
   font-size: large;
 }
 
 .weather-forecast {
-  color: #743fab;
+  color: #392b62;
+  padding: 100px;
 }
 
 body {
@@ -15,4 +15,29 @@ body {
 
 .weather-forecast-min {
   color: #6c82cd;
+}
+
+p {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  color: #93d5f1;
+}
+
+#city {
+  font-size: 24px;
+  padding: 20px;
+}
+
+#description {
+  color: #766de9;
+}
+
+div.description::first-letter {
+  text-transform: capitalize;
+}
+
+#date {
+  padding: 45px;
+  font-size: 20px;
 }
