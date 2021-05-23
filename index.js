@@ -15,6 +15,32 @@ function formatDate(timestamp) {
     return `${day} ${hours}:${minutes}`;
     }
 
+    function displayForecast() {
+        let forecastElement = document.querySelector("#forecast");
+        let forecastHTML = `<div class="row">`;
+
+        let days = ["Thu", "Fri", "Sat", "Sun"];
+        days.forEach(function (day) {
+        forecastHTML = forecastHTML + 
+        `   <div class="col-2">
+             <div class="weather-forecast-date">${day}</div>
+             <img src= "https://specials-images.forbesimg.com/imageserve/933666298/960x0.jpg?fit=scale" alt= "" width="70"/>
+             <div class="weather-forecast-temperatures">
+             <span class="weather-forecast-min">
+                 10º
+             </span>
+             <span class="weather-forecast-max">
+                 13º
+             </span>
+             </div>
+             </div>
+`;
+});
+
+forecastHTML = forecastHTML +`</div>`;
+forecastElement.innerHTML = forecastHTML;
+
+    }
 
 
 function displayTemperature(response) {
@@ -30,7 +56,7 @@ console.log(response.data);
     let iconElement = document.querySelector("#icon");
 
 
-    celiusTemperature = response.data.main.temp;
+     celiusTemperature = response.data.main.temp;
 
     dateElement.innerHTML = formatDate(response.data.dt * 1000);
     windElement.innerHTML = Math.round(response.data.wind.speed);
@@ -77,6 +103,7 @@ function displayCeliusTemperature(event) {
 }
 
 
+
 let celiusTemperature = null;
 
 let form = document.querySelector("#search-form");
@@ -87,3 +114,6 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 let celiusLink = document.querySelector("#celius-link");
 celiusLink.addEventListener("click", displayCeliusTemperature);
+
+
+displayForecast();
