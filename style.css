@@ -11,6 +11,8 @@
 
 body {
   background-image: linear-gradient(to right, #766de9, #97bbe9) !important;
+
+  font-family: "KoHo", sans-serif !important;
 }
 
 .weather-forecast-min {
@@ -33,10 +35,6 @@ p {
   padding: 20px;
 }
 
-#description {
-  color: #766de9;
-}
-
 div.description::first-letter {
   text-transform: capitalize;
 }
@@ -44,4 +42,8 @@ div.description::first-letter {
 #date {
   padding: 45px;
   font-size: 20px;
+}
+
+#icon {
+  padding: 20px;
 }
