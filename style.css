@@ -3,3 +3,11 @@
   background-color: #0c0032;
   color: #3500d3;
 }
+
+.weather-forecast {
+  color: green;
+}
+
+body {
+  background-color: #0c0032 !important;
+}
