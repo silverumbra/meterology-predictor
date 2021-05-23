@@ -1,13 +1,18 @@
 .weather-app {
   padding: 20px;
-  background-color: #0c0032;
   color: #3500d3;
+  font-family: garamond;
+  font-size: large;
 }
 
 .weather-forecast {
-  color: green;
+  color: #743fab;
 }
 
 body {
-  background-color: #0c0032 !important;
+  background-image: linear-gradient(to right, #766de9, #97bbe9) !important;
+}
+
+.weather-forecast-min {
+  color: #6c82cd;
 }
