@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>meterology predictor</title>
-    <link rel="stylesheet", href="style.css"/>
+    <link rel="stylesheet" , href="style.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
@@ -14,64 +15,68 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=KoHo:wght@400&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
     </header>
     <div class="weather-app">
-     <div class="container">
-     <div class="form-floating ml-4 mt-3 mb-4 w-25 search-form">
-         <form class="search-form" id="search-form">
-         <input type="search" class="form-control bg-dark" id="city-input" autocomplete="off" autofocus="on" placeholder="Forecast for...">
-         <input type="submit" value="Predict" class = "btn btn-dark shadow-sm" id="search-form"/>
-         </form>
-     </div>
-     <div class="row">
-         <div class="col-4" id="date"></div>
-         <div class="col">
-        <strong id = "city"></strong>
-         </br>
-        <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="" id="icon" />
-        </br>
-        <span class="col-2" id="description"></span>
+        <div class="container">
+            <div class="form-floating ml-4 mt-3 mb-4 w-25 search-form">
+                <form class="search-form" id="search-form">
+                    <input type="search" class="form-control bg-dark" id="city-input" autocomplete="off" autofocus="on"
+                        placeholder="Forecast for...">
+                    <input type="submit" value="Predict" class="btn btn-dark shadow-sm" id="search-form" />
+                </form>
+            </div>
+            <div class="row">
+                <div class="col-4" id="date"></div>
+                <div class="col">
+                    <strong id="city"></strong>
+                    </br>
+                    <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="" id="icon" />
+                    </br>
+                    <span class="col-2" id="description"></span>
+
+                </div>
+
+
+                <div class="col-2">
+                    <strong id="temperature"></strong>
+                    <span class="units"><a href="#" id="celius-link" class="active">ºC</a>
+                        |
+                        <a href="#" id="fahrenheit-link" class="active">ºF</a>
+                    </span>
+                </div>
+
+
+
+
+                <div class="col-2" id="wind">wind speed</div>
+
+
+                <div class="col-2" id="humidity"> humidity</div>
+
+            </div>
+            <div class="weather-forecast" id="forecast"></div>
 
         </div>
-         
-             
-<div class="col-2">
-             <strong id="temperature"></strong>
-                <span class="units"><a href="#" id="celius-link" class="active">ºC</a>
-                    |
-                    <a href="#" id="fahrenheit-link" class="active">ºF</a>
-                    </span>
-         </div>
 
 
 
-          
-<div class="col-2"id="wind">wind speed</div>
-
-
-<div class="col-2" id="humidity"> humidity</div>
-
-</div>
-<div class="weather-forecast" id ="forecast"></div>
-
-     </div>
-
-   
-
-</div>
-     </div>
+    </div>
+    </div>
 
 
 
 
 
     <footer>
-<p>
-        tenuously designed by mathilda, find source code on my <a href="https://github.com/silverumbra/meterology-predictor">github. </a>
-    </p>
+        <p>
+            test mode lower than beta; more like omega. Silver's fault:
+            <a href="https://github.com/silverumbra/meterology-predictor">github. </a>
+        </p>
     </footer>
     <script src="index.js"></script>
 </body>
+
 </html>
